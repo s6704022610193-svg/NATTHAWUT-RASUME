@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NATTHAWUT SAEUENG - UX/UI Designer</title>
+  <title>Natthawut Saeueng - UX/UI Designer</title>
 
   <style>
 
@@ -27,10 +27,6 @@
       margin: auto;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
-
     .header {
       background: linear-gradient(
         110deg,
@@ -40,7 +36,6 @@
       );
 
       border-radius: 20px;
-
       padding: 38px 48px;
 
       display: flex;
@@ -54,144 +49,81 @@
       margin-bottom: 28px;
     }
 
-
-    /* PROFILE */
-
     .profile {
       display: flex;
       align-items: center;
       gap: 28px;
     }
 
-
-    /* PROFILE IMAGE */
-
     .profile img {
       width: 145px;
       height: 145px;
-
       object-fit: cover;
-
       border-radius: 50%;
-
       border: 6px solid white;
-
       display: block;
     }
 
-
-    /* NAME */
-
     .name {
       font-size: 42px;
-
       font-weight: 800;
-
       letter-spacing: 1px;
-
       line-height: 1.1;
     }
 
-
-    /* CANDIDATE */
-
     .candidate {
       display: inline-block;
-
       margin-top: 10px;
-
       padding: 7px 18px;
 
       border: 1px solid rgba(255,255,255,0.5);
-
       border-radius: 20px;
 
       background: rgba(255,255,255,0.12);
 
       font-size: 16px;
-
       letter-spacing: 1px;
     }
 
-
-    /* ROLE */
-
     .role {
       border-left: 3px solid rgba(255,255,255,0.4);
-
       padding-left: 28px;
-
       text-align: left;
     }
 
     .role h2 {
       font-size: 26px;
-
       letter-spacing: 1px;
     }
 
     .role p {
       margin-top: 6px;
-
       font-size: 17px;
-
       letter-spacing: 1px;
-
       color: #dcecff;
     }
 
-
-    /* =========================
-       MAIN GRID
-    ========================= */
-
     .grid {
       display: grid;
-
-      grid-template-columns:
-        1fr
-        1fr
-        1fr;
-
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 28px;
     }
 
-
-    /* CARD */
-
     .card {
       background: white;
-
       border-radius: 20px;
-
       padding: 30px;
-
-      box-shadow:
-        0 3px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
-
-
-    /* CARD TITLE */
 
     .card h2 {
       color: #087db5;
-
       font-size: 21px;
-
       letter-spacing: 1px;
-
       margin-bottom: 20px;
-
       padding-bottom: 16px;
-
-      border-bottom:
-        1px solid #e2e7ed;
+      border-bottom: 1px solid #e2e7ed;
     }
-
-
-    /* =========================
-       PERSONAL INFO
-    ========================= */
 
     .info-item {
       margin-bottom: 22px;
@@ -199,62 +131,27 @@
 
     .info-item strong {
       display: block;
-
       color: #68758a;
-
       font-size: 15px;
-
       letter-spacing: 1px;
-
       margin-bottom: 6px;
     }
 
     .info-item span {
       font-size: 18px;
-
       color: #202c3e;
-
       word-break: break-word;
     }
 
-
-    /* PHONE LINK */
-
     .phone {
       color: #202c3e;
-
       text-decoration: none;
     }
-
-    .phone:hover {
-      text-decoration: underline;
-    }
-
-
-    /* EMAIL */
-
-    .email {
-      color: #202c3e;
-
-      text-decoration: none;
-    }
-
-    .email:hover {
-      text-decoration: underline;
-    }
-
-
-    /* =========================
-       KEY COMPETENCIES
-    ========================= */
 
     .skill {
       padding: 0 0 18px 0;
-
       margin-bottom: 18px;
-
-      border-bottom:
-        1px dashed #e1e5eb;
+      border-bottom: 1px dashed #e1e5eb;
     }
 
     .skill:last-child {
@@ -263,99 +160,61 @@
 
     .skill h3 {
       color: #233f7b;
-
       font-size: 18px;
-
       margin-bottom: 8px;
-
       line-height: 1.4;
     }
 
     .skill h3::before {
       content: "●";
-
       color: #078fc8;
-
       margin-right: 10px;
-
       font-size: 13px;
     }
 
     .skill p {
       color: #5b6677;
-
       line-height: 1.55;
-
       font-size: 16px;
     }
 
-
-    /* =========================
-       TOOLS
-    ========================= */
-
     .tool {
-      border:
-        1px solid #dce3ea;
-
+      border: 1px solid #dce3ea;
       border-radius: 15px;
-
       padding: 17px;
-
       margin-bottom: 14px;
-
       position: relative;
-
       background: #fbfcfe;
     }
 
     .tool h3 {
       font-size: 18px;
-
       color: #202b3e;
-
       margin-bottom: 7px;
-
       padding-right: 100px;
     }
 
     .tool p {
       color: #687386;
-
       line-height: 1.45;
-
       font-size: 15px;
-
       padding-right: 5px;
     }
 
-
-    /* TAG */
-
     .tag {
       position: absolute;
-
       right: 14px;
-
       top: 14px;
 
       background: #e1f3fc;
-
       color: #1685b9;
 
       padding: 5px 10px;
-
       border-radius: 12px;
 
       font-size: 12px;
-
       font-weight: bold;
     }
-
-
-    /* =========================
-       ABOUT ME
-    ========================= */
 
     .about {
       margin-top: 28px;
@@ -363,16 +222,9 @@
 
     .about p {
       color: #5d6879;
-
       line-height: 1.7;
-
       font-size: 16px;
     }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 1000px) {
 
@@ -382,25 +234,18 @@
 
       .header {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 25px;
       }
 
       .role {
         border-left: none;
-
-        border-top:
-          2px solid rgba(255,255,255,0.4);
-
+        border-top: 2px solid rgba(255,255,255,0.4);
         padding-left: 0;
-
         padding-top: 20px;
       }
 
     }
-
 
     @media (max-width: 600px) {
 
@@ -414,13 +259,11 @@
 
       .profile {
         flex-direction: column;
-
         align-items: flex-start;
       }
 
       .profile img {
         width: 110px;
-
         height: 110px;
       }
 
@@ -452,36 +295,22 @@
 <div class="container">
 
 
-  <!-- ==================================
-       HEADER
-  =================================== -->
+  <!-- HEADER -->
 
   <header class="header">
 
     <div class="profile">
-
-
-      <!--
-        รูปโปรไฟล์
-
-        ให้อัปโหลดไฟล์ชื่อ:
-        profile.jpg
-
-        ไว้ในโฟลเดอร์เดียวกับ index.html
-      -->
 
       <img
         src="./profile.jpg"
         alt="Profile Photo"
       >
 
-
       <div>
 
         <div class="name">
-          CHUTIMON UDOMVITID
+          NATTHAWUT SAEUENG
         </div>
-
 
         <div class="candidate">
           CO-OP INTERNSHIP CANDIDATE
@@ -507,17 +336,12 @@
   </header>
 
 
-
-  <!-- ==================================
-       THREE COLUMNS
-  =================================== -->
+  <!-- MAIN CONTENT -->
 
   <section class="grid">
 
 
-    <!-- ==================================
-         PERSONAL INFO
-    =================================== -->
+    <!-- PERSONAL INFO -->
 
     <div class="card">
 
@@ -585,10 +409,7 @@
     </div>
 
 
-
-    <!-- ==================================
-         KEY COMPETENCIES
-    =================================== -->
+    <!-- KEY COMPETENCIES -->
 
     <div class="card">
 
@@ -659,10 +480,7 @@
     </div>
 
 
-
-    <!-- ==================================
-         TOOLS & EXPERIENCE
-    =================================== -->
+    <!-- TOOLS -->
 
     <div class="card">
 
@@ -670,8 +488,6 @@
         TOOLS &amp; APPLIED EXPERIENCE
       </h2>
 
-
-      <!-- Figma -->
 
       <div class="tool">
 
@@ -692,8 +508,6 @@
       </div>
 
 
-      <!-- FigJam -->
-
       <div class="tool">
 
         <span class="tag">
@@ -713,8 +527,6 @@
       </div>
 
 
-      <!-- Design System -->
-
       <div class="tool">
 
         <span class="tag">
@@ -733,8 +545,6 @@
 
       </div>
 
-
-      <!-- HTML CSS -->
 
       <div class="tool">
 
@@ -759,10 +569,7 @@
   </section>
 
 
-
-  <!-- ==================================
-       ABOUT ME
-  =================================== -->
+  <!-- ABOUT ME -->
 
   <section class="card about">
 
@@ -782,7 +589,6 @@
 
 
 </div>
-
 
 </body>
 
