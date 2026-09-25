@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chutimon Udomvitid - UX/UI Designer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f1f4f8;
+      color: #27364d;
+      padding: 28px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(110deg, #111d3b, #172e72, #0796d0);
+      border-radius: 20px;
+      padding: 38px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .profile img {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+    }
+
+    .name {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .candidate {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 18px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.12);
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .role {
+      border-left: 3px solid rgba(255,255,255,0.4);
+      padding-left: 28px;
+      text-align: left;
+    }
+
+    .role h2 {
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    .role p {
+      margin-top: 6px;
+      font-size: 17px;
+      letter-spacing: 1px;
+      color: #dcecff;
+    }
+
+    /* Main cards */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      color: #087db5;
+      font-size: 21px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e2e7ed;
+    }
+
+    /* Personal info */
+    .info-item {
+      margin-bottom: 22px;
+    }
+
+    .info-item strong {
+      display: block;
+      color: #68758a;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .info-item span {
+      font-size: 18px;
+      color: #202c3e;
+    }
+
+    /* Competencies */
+    .skill {
+      padding: 0 0 18px 0;
+      margin-bottom: 18px;
+      border-bottom: 1px dashed #e1e5eb;
+    }
+
+    .skill:last-child {
+      border-bottom: none;
+    }
+
+    .skill h3 {
+      color: #233f7b;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .skill h3::before {
+      content: "●";
+      color: #078fc8;
+      margin-right: 10px;
+      font-size: 13px;
+    }
+
+    .skill p {
+      color: #5b6677;
+      line-height: 1.55;
+      font-size: 16px;
+    }
+
+    /* Tools */
+    .tool {
+      border: 1px solid #dce3ea;
+      border-radius: 15px;
+      padding: 17px;
+      margin-bottom: 14px;
+      position: relative;
+      background: #fbfcfe;
+    }
+
+    .tool h3 {
+      font-size: 18px;
+      color: #202b3e;
+      margin-bottom: 7px;
+    }
+
+    .tool p {
+      color: #687386;
+      line-height: 1.45;
+      font-size: 15px;
+      padding-right: 10px;
+    }
+
+    .tag {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      background: #e1f3fc;
+      color: #1685b9;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* About */
+    .about {
+      margin-top: 28px;
+    }
+
+    .about p {
+      color: #5d6879;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+      }
+
+      .role {
+        border-left: none;
+        border-top: 2px solid rgba(255,255,255,0.4);
+        padding-left: 0;
+        padding-top: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+      }
+
+      .header {
+        padding: 25px;
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile img {
+        width: 110px;
+        height: 110px;
+      }
+
+      .name {
+        font-size: 29px;
+      }
+
+      .candidate {
+        font-size: 12px;
+      }
+
+      .role h2 {
+        font-size: 20px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div class="profile">
+
+        <!-- ใส่รูปของคุณที่นี่ -->
+        <img src="profile.jpg" alt="Profile Photo">
+
+        <div>
+          <div class="name">CHUTIMON UDOMVITID</div>
+
+          <div class="candidate">
+            CO-OP INTERNSHIP CANDIDATE
+          </div>
+        </div>
+
+      </div>
+
+      <div class="role">
+        <h2>UX/UI DESIGNER</h2>
+        <p>PRODUCT &amp; INTERACTION</p>
+      </div>
+
+    </header>
+
+
+    <!-- THREE COLUMNS -->
+    <section class="grid">
+
+      <!-- PERSONAL INFO -->
+      <div class="card">
+
+        <h2>PERSONAL INFO</h2>
+
+        <div class="info-item">
+          <strong>EMAIL</strong>
+          <span>s6704022610193@email.kmutnb.ac.th</span>
+        </div>
+
+        <div class="info-item">
+          <strong>PHONE</strong>
+          <span>0836140489</span>
+        </div>
+
+        <div class="info-item">
+          <strong>LOCATION</strong>
+          <span>Bangkok, Thailand</span>
+        </div>
+
+        <div class="info-item">
+          <strong>DATE OF BIRTH</strong>
+          <span>September 30, 2005</span>
+        </div>
+
+      </div>
+
+
+      <!-- KEY COMPETENCIES -->
+      <div class="card">
+
+        <h2>KEY COMPETENCIES</h2>
+
+        <div class="skill">
+          <h3>User Empathy &amp; Research</h3>
+          <p>
+            Skilled at analyzing real user pain points,
+            conducting behavioral interviews, and converting
+            research insights into actionable problem statements.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Wireframing &amp; Prototyping</h3>
+          <p>
+            Proficient in translating complex requirements
+            into clear user flows, low-to-high fidelity
+            wireframes, and interactive prototypes ready for testing.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Analytical Logic &amp; Feasibility</h3>
+          <p>
+            Leverages a strong Mathematics and CS background
+            to design UI structures with high technical feasibility
+            and clear system logic for developers.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Fast Learner &amp; Adaptability</h3>
+          <p>
+            Quickly masters emerging design tools, industry
+            design systems, and domain-specific knowledge
+            across varied technical landscapes.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- TOOLS -->
+      <div class="card">
+
+        <h2>TOOLS &amp; APPLIED EXPERIENCE</h2>
+
+        <div class="tool">
+          <span class="tag">CORE TOOL</span>
+          <h3>Figma</h3>
+          <p>
+            Used for UI mockups, responsive layouts,
+            interactive prototyping, and preparing clickable
+            demos for usability testing.
+          </p>
+        </div>
+
+        <div class="tool">
+          <span class="tag">RESEARCH</span>
+          <h3>FigJam / Miro</h3>
+          <p>
+            Used for mapping User Journey, Empathy Maps,
+            Information Architecture, and brainstorming
+            system workflows.
+          </p>
+        </div>
+
+        <div class="tool">
+          <span class="tag">STRUCTURE</span>
+          <h3>Design System</h3>
+          <p>
+            Applied reusable components, color styles,
+            typographic scales, and auto-layout to maintain
+            design consistency.
+          </p>
+        </div>
+
+        <div class="tool">
+          <span class="tag">FRONTEND</span>
+          <h3>HTML5 / CSS3</h3>
+          <p>
+            Built responsive web layouts, structured card
+            components, and tested design feasibility with
+            real code.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+    <section class="card about">
+
+      <h2>ABOUT ME</h2>
+
+      <p>
+        I am a UX/UI Designer who enjoys understanding users,
+        solving problems, and transforming ideas into simple,
+        intuitive, and effective digital experiences.
+        I am interested in product design, interaction design,
+        and continuously improving my design and development skills.
+      </p>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
